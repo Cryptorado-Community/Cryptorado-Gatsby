@@ -8,9 +8,7 @@ const Footer = () => {
     query{
       site{
         siteMetadata{
-          title,
-          siteUrl,
-          description
+          author
         }
       }
     }
@@ -19,7 +17,7 @@ const Footer = () => {
 return (<footer className={footerStyles.footer}>
   <h2>
     <Link className={footerStyles.title} to="/">
-      {data.site.siteMetadata.title}
+      By: {data.site.siteMetadata.author}
     </Link>
   </h2>
 </footer>)
